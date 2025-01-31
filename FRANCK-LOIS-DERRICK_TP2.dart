@@ -64,7 +64,8 @@ void main() {
 // Rajout d'une catégorie à chaque client
   for (int i = 0; i < clients.length; i++) {
     String categorie = listcategories[i % listcategories.length];
-
+   print('Client: ${clients[i].nom} ${clients[i].prenom}, Catégorie: $categorie');
+    
     //4
     // Filtrage par nom
   List<Client> filteredByName = useCase.filterByName('DAGAN');
@@ -74,9 +75,6 @@ void main() {
   List<Client> filteredByCategory = useCase.filterByCategory('VIP');
   print('Clients filtrés par catégorie:');
   useCase.displayClients(filteredByCategory);
-    print('Client: ${clients[i].nom} ${clients[i]
-        .prenom}, Catégorie: $categorie');
   }
 }
 
-//4- 
